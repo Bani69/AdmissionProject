@@ -1,25 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import {ADMISSION_REQUIREMENTS, ENROLLMENT_PROCEDURE, SCHEDULE_FEE} from "./admissionData/AdmissionData";
+
+
+import "../src/index.css"
+import Header from "./components/Header";
+
+import Navbar from "./components/Navbar";
+import AdmissionRequirements from "./components/AdmissionRequirements";
+import EnrollmentProcedure from "./components/EnrollmentProcedure";
+import Welcome from "./components/Welcome";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    return (
+        <>
+            <div className="h-screen flex flex-col">
+                <Header/>
+                <Navbar/>
+                <Welcome/>
+
+            </div>
+
+            <div className="flex flex-col  pb-10">
+                <AdmissionRequirements/>
+                <EnrollmentProcedure/>
+                </div>
+
+
+        </>
+
+    );
 }
 
 export default App;
